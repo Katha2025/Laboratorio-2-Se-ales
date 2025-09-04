@@ -51,3 +51,8 @@ plt.ylabel("y[n]")
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+<img width="303" height="286" alt="image" src="https://github.com/user-attachments/assets/36337bfa-5a1a-4867-bda0-d9e12519e6c8" />
+
+<img width="934" height="562" alt="image" src="https://github.com/user-attachments/assets/019e0ef5-93ee-42ed-bf00-2740244ca783" />
+
