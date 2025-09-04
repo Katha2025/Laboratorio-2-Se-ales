@@ -221,5 +221,6 @@ Ahora bien, estos fueron los resultados obtenidos:
 
 
 **3. Importancia de la correlación cruzada en el procesamiento digital de señales**
+
 La correlación cruzada es útil porque permite identificar similitudes, patrones o retrasos entre señales, lo que resulta esencial en aplicaciones prácticas. Por ejemplo, en el análisis de señales biológicas puede ayudar a detectar ritmos o sincronizaciones; en comunicaciones, permite encontrar la llegada de una señal en presencia de ruido; y en el procesamiento de imágenes, sirve para reconocer patrones o coincidencias. En este caso, su aplicación permitió evidenciar cómo dos señales relacionadas pueden compararse y medirse en función de su desplazamiento temporal.
 
