@@ -15,6 +15,8 @@ En la primera parte de la prática se trabajó la convolución entre un sistema 
 <img width="1599" height="149" alt="image" src="https://github.com/user-attachments/assets/19facc74-440c-46e8-8463-9d02a543c35d" />
 
 
+
+
 **-Gráfica manual**
 
 <img width="631" height="819" alt="image" src="https://github.com/user-attachments/assets/4ec6cf9a-b838-4265-b21a-c8ddfe83cfb4" />
