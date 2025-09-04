@@ -207,6 +207,12 @@ plt.title("Correlación cruzada entre x1[n] y x2[n]")
 plt.grid(True)
 plt.show()
 ```
+Ahora bien, estos fueron los resultados obtenidos:
+
+<img width="819" height="468" alt="image" src="https://github.com/user-attachments/assets/17e280a0-0c94-4f31-874e-5423938e5abd" />
 
 
+**2. Gráfica y secuencia resultante**
+
+<img width="830" height="497" alt="image" src="https://github.com/user-attachments/assets/82ab92f4-d5f0-4469-9211-b9d47a09deae" />
 
