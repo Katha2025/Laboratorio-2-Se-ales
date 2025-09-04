@@ -111,3 +111,53 @@ plt.show()
 <img width="493" height="377" alt="image" src="https://github.com/user-attachments/assets/5fafa07d-4103-4169-8888-4a4b723bdb4e" />
 
 <img width="864" height="587" alt="image" src="https://github.com/user-attachments/assets/996a2343-14fd-4edf-aa4a-98eb100c3fe5" />
+
+**Kathalina**
+
+
+**-Convolución manual**
+
+
+
+
+**-Gráfica manual**
+
+
+**-Convolución y gráfica en python**
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# -------------------------------
+# Señales de entrada
+# -------------------------------
+h = [5, 6, 0, 0, 8, 7, 5]  # Código
+x = [1, 0, 9, 6, 9, 4, 7, 8, 4, 4]  # Cédula
+
+# Convolución
+y = np.convolve(x, h)
+
+# Mostrar valores secuenciales
+
+print("Valores de y[n]:")
+for i, val in enumerate(y):
+    print(f"y[{i}] = {val}")
+
+# -------------------------------
+# Graficar señal
+# -------------------------------
+n = np.array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
+plt.stem(n,y)
+# Índices de tiempo
+plt.title("Señal y[n] = x[n] * h[n]")
+plt.xlabel("n (índice)")
+plt.ylabel("y[n]")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+```
+
+<img width="320" height="383" alt="image" src="https://github.com/user-attachments/assets/d76f9eac-adc9-4806-809b-183c8f951af3" />
+
+<img width="892" height="596" alt="image" src="https://github.com/user-attachments/assets/64b59765-26e9-4ec6-b4df-ea809cf5db9f" />
