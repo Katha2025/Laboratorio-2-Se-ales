@@ -1,1 +1,1 @@
-# Laboratorio-2-Se-ales
+# Laboratorio-2-Señales
