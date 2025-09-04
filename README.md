@@ -216,8 +216,7 @@ Ahora bien, estos fueron los resultados obtenidos:
 
 <img width="830" height="497" alt="image" src="https://github.com/user-attachments/assets/82ab92f4-d5f0-4469-9211-b9d47a09deae" />
 
-
-
+La correlación cruzada entre las señales X_1[n] y X_2 [n] produjo una secuencia con valores positivos y negativos que dependen del retardo 𝑙, en la gráfia se puede observar que los picos más altos aparecen alrededor de 𝑙=-2 e 𝑙=2, lo que indica que las señales presentan una fuerte similitud cuando una se desplaza respecto a la otra en esas posiciones. Además, la secuencia muestra un comportamiento casi simétrico con respecto al origen, lo que significa que la similitud se manifiesta tanto para retardos positivos como para retardos negativos. En conclusión, el resultado evidencia que las dos señales comparten características comunes, aunque estas se presentan en distintos desfases temporales.
 
 
 **3. Importancia de la correlación cruzada en el procesamiento digital de señales**
