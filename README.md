@@ -3,7 +3,7 @@ En esta práctica se trabajaron tres conceptos importantes del procesamiento de 
 # Parte A
 En la primera parte de la prática se trabajó la convolución entre un sistema h[n], definido a partir de los dígitos del código de cada uno de los inetgrantes y una señal x[n] construida con los dígitos de la cédula. Inicialmente, se realizó el cálculo manual y se representó el resultado de forma gráfica. Posteriormente, el mismo procedimiento se repitió en Python, lo que permitió verificar los resultados obtenidos y generar las gráficas correspondientes.
 
-**Luciana :**
+**1. Luciana :**
 
 
 **-Convolución manual**
@@ -59,7 +59,7 @@ plt.show()
 
 <img width="934" height="562" alt="image" src="https://github.com/user-attachments/assets/019e0ef5-93ee-42ed-bf00-2740244ca783" />
 
-**Ana María**
+**2. Ana María :**
 
 **-Convolución manual**
 
@@ -112,7 +112,7 @@ plt.show()
 
 <img width="864" height="587" alt="image" src="https://github.com/user-attachments/assets/996a2343-14fd-4edf-aa4a-98eb100c3fe5" />
 
-**Kathalina**
+**3. Kathalina :**
 
 
 **-Convolución manual**
