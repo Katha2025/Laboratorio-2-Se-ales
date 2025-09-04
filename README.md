@@ -12,15 +12,13 @@ En la primera parte de la prática se trabajó la convolución entre un sistema 
 
 <img width="604" height="473" alt="image" src="https://github.com/user-attachments/assets/16c15482-96cc-4f21-a5cb-aa133520e31d" />
 
+
 <img width="1599" height="149" alt="image" src="https://github.com/user-attachments/assets/19facc74-440c-46e8-8463-9d02a543c35d" />
-
-
 
 
 **-Gráfica manual**
 
 <img width="631" height="819" alt="image" src="https://github.com/user-attachments/assets/4ec6cf9a-b838-4265-b21a-c8ddfe83cfb4" />
-
 
 **-Convolución y gráfica en python**
 
@@ -64,12 +62,17 @@ plt.show()
 **Ana María**
 
 **-Convolución manual**
+
 <img width="755" height="239" alt="image" src="https://github.com/user-attachments/assets/4c1aea4d-8c66-45b8-97fe-9921c7cd68d8" />
 
 <img width="1445" height="715" alt="image" src="https://github.com/user-attachments/assets/e18fc353-27df-4323-9046-1d3c25eb116f" />
 
+
 **-Gráfica manual**
+
+
 <img width="843" height="724" alt="image" src="https://github.com/user-attachments/assets/c2da7938-831e-4d52-9476-42d81958d448" />
+
 
 **-Convolución y gráfica en python**
 
