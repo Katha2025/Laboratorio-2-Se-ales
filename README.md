@@ -9,6 +9,9 @@ En la primera parte de la prática se trabajó la convolución entre un sistema 
 
 <img width="784" height="312" alt="image" src="https://github.com/user-attachments/assets/fbff055f-ce87-4ee1-8e14-67eef69d1bb5" />
 
+<img width="604" height="473" alt="image" src="https://github.com/user-attachments/assets/16c15482-96cc-4f21-a5cb-aa133520e31d" />
+
+
 **Gráfica manual**
 
 <img width="631" height="819" alt="image" src="https://github.com/user-attachments/assets/4ec6cf9a-b838-4265-b21a-c8ddfe83cfb4" />
