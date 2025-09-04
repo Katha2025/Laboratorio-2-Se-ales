@@ -161,3 +161,52 @@ plt.show()
 <img width="320" height="383" alt="image" src="https://github.com/user-attachments/assets/d76f9eac-adc9-4806-809b-183c8f951af3" />
 
 <img width="892" height="596" alt="image" src="https://github.com/user-attachments/assets/64b59765-26e9-4ec6-b4df-ea809cf5db9f" />
+
+# Parte B 
+En la segunda parte de la práctica se definieron dos señales y se calculó su correlación cruzada, con el objetivo de medir el grado de similitud entre ellas. Una vez obtenida la secuencia resultante, se representó gráficamente para analizar su comportamiento y se discutió en qué situaciones resulta útil aplicar este procedimiento dentro del procesamiento digital de señales.
+Las señales cruzadas fueron:
+
+<img width="443" height="69" alt="image" src="https://github.com/user-attachments/assets/b08cc3c9-efef-40bf-b183-dc08c7b8b651" />
+
+**1. Correlación Cruzada entre ambas señales**
+
+A continuación se presenta el código en python empleado para calcular la correlación de las señales:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parámetros
+Ts = 1.25e-3   # 1.25 ms
+f = 100        # Hz
+N = 9          # número de muestras
+n = np.arange(N)
+w0 = 2*np.pi*f*Ts  # frecuencia digital
+
+# Definición de señales
+x1 = np.cos(w0 * n)
+x2 = np.sin(w0 * n)
+
+print("x1[n] =", np.round(x1, 4))
+print("x2[n] =", np.round(x2, 4))
+
+# Correlación cruzada
+r12 = np.correlate(x1, x2, mode='full')
+lags = np.arange(-N+1, N)
+
+print("\nCorrelación cruzada r12[l]:")
+for l, val in zip(lags, r12):
+    print(f"l={l:2d}, r12={val:.4f}")
+
+# Gráfica
+plt.figure(figsize=(7,4))
+plt.stem(lags, r12, basefmt="r-")
+plt.xlabel("Retardo l (muestras)")
+plt.ylabel("r12[l]")
+plt.title("Correlación cruzada entre x1[n] y x2[n]")
+plt.grid(True)
+plt.show()
+```
+
+
+
