@@ -59,3 +59,5 @@ plt.show()
 
 <img width="934" height="562" alt="image" src="https://github.com/user-attachments/assets/019e0ef5-93ee-42ed-bf00-2740244ca783" />
 
+**Ana María**
+
