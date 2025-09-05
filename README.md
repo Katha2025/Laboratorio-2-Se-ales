@@ -288,11 +288,11 @@ print(f"Máximo:", np.max(voltaje))
 print(f"Mínimo:", np.min(voltaje))
 ```
 Los valores fueron: 
-Media: 0.00608
-Mediana: -0.0561
-Desviacion estandar: 0.389
-Máximo: 1.268
-Mínimo: -1.573
+* Media: 0.00608
+* Mediana: -0.0561
+* Desviacion estandar: 0.389
+* Máximo: 1.268
+* Mínimo: -1.573
 
 La señal se puede clasificar como aleatoria, ya que depende de movimientos oculares y ruido fisiológico, y aunque un movimiento ocular repetido puede generar una onda predecible, la señal EOG es biológica y puede experimentar cambios a causa de elementos como la respuesta individual del paciente. Es aperiódica porque los movimientos oculares no ocurren en ciclos regulares. Y por ultimo, a pesar de que se digitaliza al muestrearla, se representa una señal originalmente análoga tomada con DAQ.
 
