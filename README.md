@@ -376,9 +376,9 @@ f_std = np.sqrt(np.sum(mag * (f - f_media)**2) / np.sum(mag))
 print(f"Desviación estándar: {f_std} Hz")
 ```
 Los valores fueron:
-Frecuencia media: 57.507 Hz
-Frecuencia mediana: 33.0 Hz
-Desviación estándar: 58.975 Hz
+* Frecuencia media: 57.507 Hz
+* Frecuencia mediana: 33.0 Hz
+* Desviación estándar: 58.975 Hz
 
 De igual manera, se realizó un histograma de frecuancias:
 ```python
