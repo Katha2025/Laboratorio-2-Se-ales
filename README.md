@@ -359,7 +359,7 @@ plt.show()
 
 <img width="702" height="393" alt="espectro" src="https://github.com/user-attachments/assets/0a73faaa-ae45-4a2c-aee4-1c91fa2fb582" />
 
-Se comptaron los estadísticos de media, mediana y desviación estandar en el dominio de la frecuencia:
+Se computaron los estadísticos de media, mediana y desviación estandar en el dominio de la frecuencia:
 ```python
 #media
 f_media = np.sum(f * mag) / np.sum(mag)
