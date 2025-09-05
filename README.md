@@ -224,3 +224,170 @@ La correlación cruzada entre las señales X_1[n] y X_2 [n] produjo una secuenci
 La correlación cruzada es útil porque permite identificar similitudes, patrones o retrasos entre señales, lo que resulta esencial en aplicaciones prácticas. Por ejemplo, en el análisis de señales biológicas puede ayudar a detectar ritmos o sincronizaciones; en comunicaciones, permite encontrar la llegada de una señal en presencia de ruido; y en el procesamiento de imágenes, sirve para reconocer patrones o coincidencias. En este caso, su aplicación permitió evidenciar cómo dos señales relacionadas pueden compararse y medirse en función de su desplazamiento temporal.
 
 # Parte C
+
+En la ultima parte de esta práctica, se capto una señal EOG (electrooculograma) del generador de señales con ayuda del DAQ. Para esto, se utilizó el siguiente codigo:
+
+```python
+import nidaqmx                     # Librería daq
+from nidaqmx.constants import AcquisitionType 
+import matplotlib.pyplot as plt    # Librería para graficar
+import numpy as np                 # Librería de funciones matemáticas
+
+#%% Adquisición de la señal por tiempo definido
+fs = 400           # Frecuencia de muestreo en Hz
+duracion = 5        # Periodo por el cual desea medir en segundos
+senal = []          # Vector vacío en el que se guardará la señal
+dispositivo = 'Dev1/ai0' # Nombre del dispositivo/canal 
+total_muestras = int(fs * duracion)
+
+with nidaqmx.Task() as task:
+    # Configuración del canal
+    task.ai_channels.add_ai_voltage_chan(dispositivo)
+    # Configuración del reloj de muestreo
+    task.timing.cfg_samp_clk_timing(
+        fs,
+        sample_mode=AcquisitionType.FINITE,   # Adquisición finita
+        samps_per_chan=total_muestras        # Total de muestras que quiero
+    )
+
+    # Lectura de todas las muestras de una vez
+    senal = np.array(task.read(number_of_samples_per_channel=total_muestras))
+
+t = np.arange(len(senal))/fs # Crea el vector de tiempo 
+plt.plot(t,senal)
+plt.axis([0,duracion,min(senal),max(senal)])
+plt.grid()
+plt.title(f"fs={fs}Hz, duración={duracion}s, muestras={len(senal)}")
+plt.show()
+np.savetxt('Senal_lab_2.txt', [t,  senal])
+```
+
+Para esta señal, se determinó la frecuencia de Nyquist. Se utilizó la frecuencia máxima de la señal EOG que es de aproximadamente de 50 Hz, esta se multiplicó por 2 para obtener la frecuencia de Nyquist (50 Hz* 2 = 100 Hz). Para completar el ejercicio, se digitalizó la señal usando una frecuencia de muestreo de 4 veces la frecuancia de Nyquist (400 Hz). La grafica de la señal en una duración de 5 se gundos, frecuencia de muestreo de 400 Hz y 2000 muestras dio de la siguiente manera:
+
+<img width="578" height="455" alt="partec" src="https://github.com/user-attachments/assets/23365eb9-69be-4139-831e-91bc92424178" />
+
+Siguiendo, se caracterizó la señal por su media, mediana, desviación estandar, valor máximo y valor mínimo. 
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+#media
+media=np.mean(voltaje)
+print (f"Media: {media} ")
+
+#mediana
+mediana=np.median(voltaje)
+print (f"Mediana: {mediana} ")
+
+#desviación estandar
+desviacion_muestra=np.std(voltaje, ddof=1)
+print (f"Desviacion estandar: {desviacion_muestra} ")
+
+print(f"Máximo:", np.max(voltaje))
+print(f"Mínimo:", np.min(voltaje))
+```
+Los valores fueron: 
+Media: 0.00608
+Mediana: -0.0561
+Desviacion estandar: 0.389
+Máximo: 1.268
+Mínimo: -1.573
+
+La señal se puede clasificar como aleatoria, ya que depende de movimientos oculares y ruido fisiológico, y aunque un movimiento ocular repetido puede generar una onda predecible, la señal EOG es biológica y puede experimentar cambios a causa de elementos como la respuesta individual del paciente. Es aperiódica porque los movimientos oculares no ocurren en ciclos regulares. Y por ultimo, a pesar de que se digitaliza al muestrearla, se representa una señal originalmente análoga tomada con DAQ.
+
+Para finalizar, se aplicó la transformada de Fourier: 
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+#centra señal en cero
+x = voltaje - np.mean(voltaje)
+#numero de muestras y frecuencia de muestreo
+N = len(x)
+fs = 400
+
+#funcion de transformada rapida de Fourier, rfft porque la señal es real y para devolver las frecuencias positivas
+X = np.fft.rfft(x)
+#vector de frecuencias para cada valor de la transformada, d=1/fs es el período de muestreo
+f = np.fft.rfftfreq(N, d=1/fs)
+
+#margnitud del espectro
+mag = np.abs(X) / N
+
+#grafica
+plt.figure()
+plt.plot(f, mag, color="skyblue")
+plt.xlabel("Frecuencia (Hz)")
+plt.ylabel("Magnitud")
+plt.title("Transformada de Fourier")
+plt.grid(True)
+plt.show()
+```
+ <img width="576" height="455" alt="fft" src="https://github.com/user-attachments/assets/163fc91e-5a73-426a-9537-83a0ebd79898" />
+
+En adición, se grafico la densidad espectral de potencia:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+#centra señal en cero
+x = voltaje - np.mean(voltaje)
+#numero de muestras y frecuencia de muestreo
+N = len(x)
+fs = 400
+
+#funcion de transformada rapida de Fourier, rfft porque la señal es real y para devolver las frecuencias positivas
+X = np.fft.rfft(x)
+#vector de frecuencias para cada valor de la transformada, d=1/fs es el período de muestreo
+f = np.fft.rfftfreq(N, d=1/fs)
+
+#margnitud del espectro
+mag = np.abs(X) / N
+
+#grafica
+plt.figure()
+plt.plot(f, mag, color="skyblue")
+plt.xlabel("Frecuencia (Hz)")
+plt.ylabel("Magnitud")
+plt.title("Transformada de Fourier")
+plt.grid(True)
+plt.show()
+```
+
+<img width="702" height="393" alt="espectro" src="https://github.com/user-attachments/assets/0a73faaa-ae45-4a2c-aee4-1c91fa2fb582" />
+
+Se comptaron los estadísticos de media, mediana y desviación estandar en el dominio de la frecuencia:
+```python
+#media
+f_media = np.sum(f * mag) / np.sum(mag)
+print(f"Frecuencia media: {f_media} Hz")
+
+#mediana
+mag_acumulativa = np.cumsum(mag)
+total_mag = mag_acumulativa[-1]
+f_mediana = f[np.searchsorted(mag_acumulativa, total_mag / 2)]
+print(f"Frecuencia mediana: {f_mediana} Hz")
+
+#desviacion estandar
+f_std = np.sqrt(np.sum(mag * (f - f_media)**2) / np.sum(mag))
+print(f"Desviación estándar: {f_std} Hz")
+```
+Los valores fueron:
+Frecuencia media: 57.507 Hz
+Frecuencia mediana: 33.0 Hz
+Desviación estándar: 58.975 Hz
+
+De igual manera, se realizó un histograma de frecuancias:
+```python
+plt.figure(figsize=(8, 4))
+plt.hist(f, bins=50, weights=mag, color='lightgreen', edgecolor='green')
+plt.title("Histograma de Frecuencias")
+plt.xlabel("Frecuencia (Hz)")
+plt.ylabel("Magnitud acumulada")
+plt.grid(True)
+plt.show()
+```
+<img width="700" height="393" alt="histo" src="https://github.com/user-attachments/assets/46438c40-a621-4f1d-a000-8d281ae6e898" />
