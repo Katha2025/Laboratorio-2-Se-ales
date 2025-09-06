@@ -60,7 +60,8 @@ plt.show()
 <img width="303" height="286" alt="image" src="https://github.com/user-attachments/assets/36337bfa-5a1a-4867-bda0-d9e12519e6c8" />
 
 <img width="934" height="562" alt="image" src="https://github.com/user-attachments/assets/019e0ef5-93ee-42ed-bf00-2740244ca783" />
-Grafica 1. convolución discreta.
+
+
 **2. Ana María :**
 
 **-Convolución manual**
@@ -113,7 +114,7 @@ plt.show()
 <img width="493" height="377" alt="image" src="https://github.com/user-attachments/assets/5fafa07d-4103-4169-8888-4a4b723bdb4e" />
 
 <img width="864" height="587" alt="image" src="https://github.com/user-attachments/assets/996a2343-14fd-4edf-aa4a-98eb100c3fe5" />
-Grafica 2. convolución discreta.
+
 **3. Kathalina :**
 
 
@@ -400,7 +401,9 @@ plt.ylabel("Magnitud acumulada")
 plt.grid(True)
 plt.show()
 ```
-<img width="700" height="393" alt="histo" src="https://github.com/user-attachments/assets/46438c40-a621-4f1d-a000-8d281ae6e898" />
+<img width="700" height="393" alt="histo" src="https://github.com/user-attachments/assets/46438c40-a621-4f1d-a000-8d281ae6e898" /><br>
+
+
 
 <img width="233" height="899" alt="image" src="https://github.com/user-attachments/assets/212c9ed1-f483-4e37-8773-14e34092588e" />
 Imagen 10. Diagrama de flujo parte C
