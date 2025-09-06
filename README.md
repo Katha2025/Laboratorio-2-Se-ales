@@ -165,7 +165,7 @@ plt.show()
 
 <img width="892" height="596" alt="image" src="https://github.com/user-attachments/assets/64b59765-26e9-4ec6-b4df-ea809cf5db9f" />
 
-Grafica 2. convolución discreta.
+
 
 <img width="214" height="672" alt="image" src="https://github.com/user-attachments/assets/5ca1d458-5c2c-4c78-b8fb-447c2e852f73" />
 Imagen 8. Diagrama de flujo parte A
