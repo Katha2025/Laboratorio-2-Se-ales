@@ -164,6 +164,11 @@ plt.show()
 
 <img width="892" height="596" alt="image" src="https://github.com/user-attachments/assets/64b59765-26e9-4ec6-b4df-ea809cf5db9f" />
 
+
+
+<img width="214" height="672" alt="image" src="https://github.com/user-attachments/assets/5ca1d458-5c2c-4c78-b8fb-447c2e852f73" />
+Imagen 11. Diagrama de flujo parte A
+
 # Parte B 
 En la segunda parte de la práctica se definieron dos señales y se calculó su correlación cruzada, con el objetivo de medir el grado de similitud entre ellas. Una vez obtenida la secuencia resultante, se representó gráficamente para analizar su comportamiento y se discutió en qué situaciones resulta útil aplicar este procedimiento dentro del procesamiento digital de señales.
 Las señales cruzadas fueron:
