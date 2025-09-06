@@ -60,7 +60,7 @@ plt.show()
 <img width="303" height="286" alt="image" src="https://github.com/user-attachments/assets/36337bfa-5a1a-4867-bda0-d9e12519e6c8" />
 
 <img width="934" height="562" alt="image" src="https://github.com/user-attachments/assets/019e0ef5-93ee-42ed-bf00-2740244ca783" />
-
+Grafica 1. convolución discreta.
 **2. Ana María :**
 
 **-Convolución manual**
@@ -113,7 +113,7 @@ plt.show()
 <img width="493" height="377" alt="image" src="https://github.com/user-attachments/assets/5fafa07d-4103-4169-8888-4a4b723bdb4e" />
 
 <img width="864" height="587" alt="image" src="https://github.com/user-attachments/assets/996a2343-14fd-4edf-aa4a-98eb100c3fe5" />
-
+Grafica 2. convolución discreta.
 **3. Kathalina :**
 
 
@@ -164,10 +164,10 @@ plt.show()
 
 <img width="892" height="596" alt="image" src="https://github.com/user-attachments/assets/64b59765-26e9-4ec6-b4df-ea809cf5db9f" />
 
-
+Grafica 2. convolución discreta.
 
 <img width="214" height="672" alt="image" src="https://github.com/user-attachments/assets/5ca1d458-5c2c-4c78-b8fb-447c2e852f73" />
-Imagen 11. Diagrama de flujo parte A
+Imagen 8. Diagrama de flujo parte A
 
 # Parte B 
 En la segunda parte de la práctica se definieron dos señales y se calculó su correlación cruzada, con el objetivo de medir el grado de similitud entre ellas. Una vez obtenida la secuencia resultante, se representó gráficamente para analizar su comportamiento y se discutió en qué situaciones resulta útil aplicar este procedimiento dentro del procesamiento digital de señales.
@@ -229,6 +229,9 @@ La correlación cruzada entre las señales X_1[n] y X_2 [n] produjo una secuenci
 **3. Importancia de la correlación cruzada en el procesamiento digital de señales**
 
 La correlación cruzada es útil porque permite identificar similitudes, patrones o retrasos entre señales, lo que resulta esencial en aplicaciones prácticas. Por ejemplo, en el análisis de señales biológicas puede ayudar a detectar ritmos o sincronizaciones; en comunicaciones, permite encontrar la llegada de una señal en presencia de ruido; y en el procesamiento de imágenes, sirve para reconocer patrones o coincidencias. En este caso, su aplicación permitió evidenciar cómo dos señales relacionadas pueden compararse y medirse en función de su desplazamiento temporal.
+
+<img width="251" height="860" alt="image" src="https://github.com/user-attachments/assets/a3b867c3-625b-4e6b-9907-c31ec2627009" />
+Imagen 9. Diagrama de flujo parte B
 
 # Parte C
 
@@ -398,3 +401,6 @@ plt.grid(True)
 plt.show()
 ```
 <img width="700" height="393" alt="histo" src="https://github.com/user-attachments/assets/46438c40-a621-4f1d-a000-8d281ae6e898" />
+
+<img width="233" height="899" alt="image" src="https://github.com/user-attachments/assets/212c9ed1-f483-4e37-8773-14e34092588e" />
+Imagen 10. Diagrama de flujo parte C
