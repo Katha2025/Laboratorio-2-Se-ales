@@ -349,30 +349,28 @@ plt.show()
 En adición, se grafico la densidad espectral de potencia:
 
 ```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-#centra señal en cero
-x = voltaje - np.mean(voltaje)
-#numero de muestras y frecuencia de muestreo
-N = len(x)
 fs = 400
+N = len(voltaje)
 
-#funcion de transformada rapida de Fourier, rfft porque la señal es real y para devolver las frecuencias positivas
-X = np.fft.rfft(x)
-#vector de frecuencias para cada valor de la transformada, d=1/fs es el período de muestreo
-f = np.fft.rfftfreq(N, d=1/fs)
+#calcula transformada rapida de Fourier completa (valores negativos y positivos)
+fft_vals = np.fft.fft(voltaje)
+#genera el vector de frecuencias
+fft_freq = np.fft.fftfreq(N, 1/fs)
 
-#margnitud del espectro
-mag = np.abs(X) / N
+#solo mitad positiva del espectro
+fft_vals = fft_vals[:N//2]
+fft_freq = fft_freq[:N//2]
+
+#densidad espectral de potencia
+psd = (1/(fs*N)) * np.abs(fft_vals)**2
 
 #grafica
-plt.figure()
-plt.plot(f, mag, color="skyblue")
+plt.figure(figsize=(8,4))
+plt.semilogy(fft_freq, psd, color="magenta")
 plt.xlabel("Frecuencia (Hz)")
-plt.ylabel("Magnitud")
-plt.title("Transformada de Fourier")
-plt.grid(True)
+plt.ylabel("Densidad espectral (V²/Hz)")
+plt.title("Densidad espectral de potencia")
+plt.grid()
 plt.show()
 ```
 
