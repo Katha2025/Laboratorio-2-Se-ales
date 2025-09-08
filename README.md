@@ -19,7 +19,8 @@ En la primera parte de la prática se trabajó la convolución entre un sistema 
 **-Gráfica manual**
 
 
-<img width="1002" height="1280" alt="image" src="https://github.com/user-attachments/assets/f7c953f2-4ee7-491c-9bf7-f18f8a2b55a6" />
+![Imagen de WhatsApp 2025-09-08 a las 14 51 13_6ec22eb1](https://github.com/user-attachments/assets/a7763568-ea37-4c1f-b011-8a63bf91bf0d)
+
 
 
 **-Convolución y gráfica en python**
