@@ -121,13 +121,14 @@ plt.show()
 **-Convolución manual**
 
 
-<img width="754" height="833" alt="image" src="https://github.com/user-attachments/assets/132dda20-4ae9-4e69-9233-d42d4848150e" />
+<img width="911" height="805" alt="image" src="https://github.com/user-attachments/assets/a65da8be-0b8d-486f-9771-54fdd8e98a21" />
+
 
 
 **-Gráfica manual**
 
 
-<img width="911" height="805" alt="image" src="https://github.com/user-attachments/assets/a65da8be-0b8d-486f-9771-54fdd8e98a21" />
+<img width="754" height="833" alt="image" src="https://github.com/user-attachments/assets/132dda20-4ae9-4e69-9233-d42d4848150e" />
 
 
 **-Convolución y gráfica en python**
